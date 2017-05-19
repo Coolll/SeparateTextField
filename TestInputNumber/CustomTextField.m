@@ -4,7 +4,9 @@
 //
 //  Created by 龙培 on 17/5/16.
 //  Copyright © 2017年 龙培. All rights reserved.
-//
+//  控件思路：http://www.jianshu.com/p/582cee0680b0
+//  控件问题反馈至：https://github.com/Coolll/SeparateTextField
+
 
 #import "CustomTextField.h"
 
