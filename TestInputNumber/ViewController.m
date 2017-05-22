@@ -12,7 +12,10 @@
 
 @interface ViewController ()
 {
-    CustomTextField *view;
+    CustomTextField *viewOne;
+    CustomTextField *viewTwo;
+    CustomTextField *viewThree;
+
 }
 @end
 
@@ -22,22 +25,42 @@
     [super viewDidLoad];
     
     //固定4个进行分隔
-    view = [[CustomTextField alloc]initWithFrame:CGRectMake(20, 100, 300, 150) withPlaceHolder:@"请输入银行卡号" withSeparateCount:4];
+    viewOne = [[CustomTextField alloc]initWithFrame:CGRectMake(20, 100, 300, 50) withPlaceHolder:@"请输入银行卡号" withSeparateCount:4];
+    viewOne.limitCount = 19;//可以不设置，但是那样的话，就可以无限输入了
+    viewOne.layer.cornerRadius = 4.0;
+    viewOne.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    viewOne.layer.borderWidth = 2.0;
+    [self.view addSubview:viewOne];
+
     
     //按照数组中的进行分隔，假如分隔电话号码@[@"3",@"4",@"4"]即可
-    //view = [[CustomTextField alloc]initWithFrame:CGRectMake(20, 100, 300, 50) withPlaceHolder:@"请输入电话号码" withSeparateArray:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"]];
-    view.limitCount = 19;
-    view.layer.cornerRadius = 4.0;
-    view.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    view.layer.borderWidth = 2.0;
-    [self.view addSubview:view];
+    viewTwo = [[CustomTextField alloc]initWithFrame:CGRectMake(20, 200, 300, 50) withPlaceHolder:@"请输入电话号码" withSeparateArray:@[@"3",@"4",@"4"]];
+    viewTwo.limitCount = 11;//可以不设置，但是那样的话，就可以无限输入了
+    viewTwo.layer.cornerRadius = 4.0;
+    viewTwo.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    viewTwo.layer.borderWidth = 2.0;
+    [self.view addSubview:viewTwo];
+
+    
+    //输入身份证号
+    viewThree = [[CustomTextField alloc]initWithFrame:CGRectMake(20, 300, 300, 50) withPlaceHolder:@"请输入身份证号" withSeparateArray:@[@"6",@"8",@"4"]];
+    viewThree.limitCount = 18;//可以不设置，但是那样的话，就可以无限输入了
+    viewThree.layer.cornerRadius = 4.0;
+    viewThree.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    viewThree.layer.borderWidth = 2.0;
+    [self.view addSubview:viewThree];
     
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"用户实际输入内容:%@",view.userInputContent);
+    NSLog(@"实际输入银行卡内容:%@",viewOne.userInputContent);
+
+    NSLog(@"实际输入电话内容:%@",viewTwo.userInputContent);
+
+    NSLog(@"实际输入身份证号内容:%@",viewThree.userInputContent);
 }
+
 
 
 - (void)didReceiveMemoryWarning {
