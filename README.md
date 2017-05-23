@@ -2,8 +2,9 @@
 
 2行代码就能实现以下效果：
 
-![image](https://github.com/Coolll/SeparateTextField/blob/master/imageFile.png)
-<img src="图片地址" width="图片显示宽度" height="显示高度" alt="图片名称"/>
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+<img src="(https://github.com/Coolll/SeparateTextField/blob/master/imageFile.png" width="207" height="368" alt="效果"/>
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
 
 分隔用户输入的字符串。适用于输入银行卡号、身份证号、手机号等场景。
