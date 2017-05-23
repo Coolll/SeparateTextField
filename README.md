@@ -4,7 +4,7 @@
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
-![效果](https://github.com/Coolll/SeparateTextField/blob/master/imageFile.png?width=207&height=368)
+<img src="https://github.com/Coolll/SeparateTextField/blob/master/imageFile.png" width="30%" height="30%">
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
@@ -20,6 +20,6 @@
 可设置最多输入字符，这里设置的是实际输入字符，不计算分隔的空格。
 可获取输入的实际内容。
 
-此控件的思想请参考：http://www.jianshu.com/p/582cee0680b0
+此控件的思想请参考：![这里](http://www.jianshu.com/p/582cee0680b0)
 
 
