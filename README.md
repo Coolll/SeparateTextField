@@ -2,11 +2,11 @@
 
 2行代码就能实现以下效果：
 
-－－－－－－－－－－－－
+
 
 <img src="https://github.com/Coolll/SeparateTextField/blob/master/imageFile.png" width="30%" height="30%">
 
-－－－－－－－－－－－－
+
 
 
 分隔用户输入的字符串。适用于输入银行卡号、身份证号、手机号等场景。
