@@ -11,3 +11,5 @@
 可获取输入的实际内容。
 
 此控件的思想请参考：http://www.jianshu.com/p/582cee0680b0
+
+效果：![image](https://github.com/Coolll/SeparateTextField/blob/master/imageFile.png)
