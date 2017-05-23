@@ -1,4 +1,9 @@
 # SeparateTextField
+
+2行代码就能实现以下效果：
+
+![image](https://github.com/Coolll/SeparateTextField/blob/master/imageFile.png)
+
 分隔用户输入的字符串。适用于输入银行卡号、身份证号、手机号等场景。
 支持固定数字分隔，如：
 
@@ -12,4 +17,4 @@
 
 此控件的思想请参考：http://www.jianshu.com/p/582cee0680b0
 
-效果：![image](https://github.com/Coolll/SeparateTextField/blob/master/imageFile.png)
+
