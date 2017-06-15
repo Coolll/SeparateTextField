@@ -53,6 +53,46 @@ static const NSInteger placeHolderLeft = 10;
 
 #pragma mark - 初始化
 
+- (void)configureTextFieldWithPlaceHolder:(NSString*)placeHolder withSeparateCount:(NSInteger)count
+{
+    if (!_placeHolderLabel) {
+        
+        self.placeHolderString = placeHolder;
+        self.separateCount = count;
+        self.locationIndex = 0;
+        
+        self.delegate = self;
+        self.keyboardType = UIKeyboardTypeNumberPad;//键盘类型
+        self.font = [UIFont systemFontOfSize:20.0];
+        self.tintColor = [UIColor grayColor];//光标颜色
+        self.viewFrame = self.frame;
+        
+        [self loadCustomViewWithPlaceHolder:self.placeHolderString];
+
+    }
+    
+}
+
+
+- (void)configureTextFieldWithPlaceHolder:(NSString*)placeHolder withSeparateArray:(NSArray*)countArray
+{
+    if (!_placeHolderLabel) {
+        
+        self.separateArray = [NSMutableArray arrayWithArray:countArray];
+        self.placeHolderString = placeHolder;
+        
+        self.delegate = self;
+        self.keyboardType = UIKeyboardTypeNumberPad;//键盘类型
+        self.font = [UIFont systemFontOfSize:20.0];
+        self.tintColor = [UIColor grayColor];//光标颜色
+        
+        self.viewFrame = self.frame;
+        
+        [self loadCustomViewWithPlaceHolder:self.placeHolderString];
+
+    }
+    
+}
 
 
 - (instancetype)initWithPlaceHolder:(NSString*)placeHolder withSeparateCount:(NSInteger)count
@@ -153,6 +193,9 @@ static const NSInteger placeHolderLeft = 10;
 
 }
 
+
+
+
 #pragma mark - 构建placeHolder
 - (void)loadCustomViewWithPlaceHolder:(NSString*)placeHolder
 {
@@ -196,13 +239,6 @@ static const NSInteger placeHolderLeft = 10;
     }
     
     
-    if ([string isEqualToString:@""] && range.location == 0 && range.length == 1 && textField.text.length == 0) {
-        
-        //输入删除键后，没有字符了，把自定义的placeHolder显示了
-        self.placeHolderLabel.hidden = NO;
-       
-    }
-    
     
     if ([string isEqualToString:@""]) {
 
@@ -214,6 +250,13 @@ static const NSInteger placeHolderLeft = 10;
     
     //设置光标位置
     [self setSelectedRange:NSMakeRange(self.locationIndex, 0)];
+    
+    if ([string isEqualToString:@""] && range.location == 0 && range.length == 1 && textField.text.length == 0) {
+        
+        //输入删除键后，没有字符了，把自定义的placeHolder显示了
+        self.placeHolderLabel.hidden = NO;
+        
+    }
     
     return NO;
 }

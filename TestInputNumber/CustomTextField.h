@@ -12,6 +12,11 @@
 
 @interface CustomTextField : UITextField
 
+- (void)configureTextFieldWithPlaceHolder:(NSString*)placeHolder withSeparateCount:(NSInteger)count;
+
+- (void)configureTextFieldWithPlaceHolder:(NSString*)placeHolder withSeparateArray:(NSArray*)countArray;
+
+
 //placeHoler  提示用户的文本
 //count  每多少个进行分割，即每隔多少个字符添加空格符号
 - (instancetype)initWithPlaceHolder:(NSString*)placeHolder withSeparateCount:(NSInteger)count;
